@@ -6,30 +6,38 @@
 <body>
 	<header></header>
 	<section>
-		<pre>
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-echo "connecting to database\n";
 $db = new PDO('mysql:dbname=farm;host=localhost', 'admin', 'JmO2n6JENrsa');
 
-echo "showing tables\n";
 $query = $db->query('SHOW TABLES');
 $tables = $query->fetchAll(PDO::FETCH_COLUMN);
 foreach($tables as $table){
-	echo "Table: ";
-	print_r($table);
-	echo "\n";
+	echo "<h2>" . $table . "</h2>";
+	
 	$select = 'SELECT * FROM `' . $table . '`';
 	$rows = $db->query($select)->fetchALL(PDO::FETCH_ASSOC);
-	foreach($rows as $row)
-		print_r($row);
-	echo "\n";
+	$cols = array_keys($rows[0]);	
+	
+	echo "<table border=1>";
+
+	echo "<tr>";
+	foreach($cols as $col)
+		echo "<th>" . $col . "</th>";
+	echo "</tr>";
+
+	foreach($rows as $row){
+		echo "<tr>";
+		foreach($cols as $col)
+			echo "<td>" . $row[$col] . "</td>";
+		echo "</tr>";
+	}
+	echo "</table>";
 }
 ?>
-		</pre>
 	</section>
 </body>
 </html>
