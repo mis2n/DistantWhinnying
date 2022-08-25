@@ -38,6 +38,7 @@ foreach($tables as $table){
 	echo "</table>";
 }
 ?>
+	<a href="http://rhel2.jrf2m.com/add_customer.php?return=index.php">Add Customer</a>
 	</section>
 </body>
 </html>
