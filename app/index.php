@@ -36,8 +36,26 @@ foreach($tables as $table){
 		echo "</tr>";
 	}
 	echo "</table>";
+
+	$show = 'SHOW CREATE TABLE ' . $table;
+	$create = $db->query($show)->fetchAll(PDO::FETCH_ASSOC);
+	print_r($create[0]['Create Table']);
+	echo "<br>";
+	foreach($rows as $row){
+		$insert = 'INSERT INTO `' . $table . '` (';
+		foreach($cols as $col)
+			$insert = $insert . '`' . $col . '`, ';
+		$insert = $insert . ') VALUES (';
+		foreach($cols as $col)
+			$insert = $insert . '\'' . $row[$col] . '\', ';
+		$insert = $insert . ')';
+		print_r($insert);
+		echo "<br>";
+	}
+
 }
 ?>
+	<br>
 	<a href="http://rhel2.jrf2m.com/add_customer.php?return=index.php">Add Customer</a>
 	</section>
 </body>
