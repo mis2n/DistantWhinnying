@@ -1,3 +1,8 @@
+<html>
+<body>
+
+<title>Creating WGRA Database Schema</title>
+
 <?php
 
 $servername = "localhost";
@@ -75,3 +80,12 @@ echo "<br>";
 echo "Connection Closed";
 
 ?>
+
+<div>
+	<p>
+		<a href="http://localhost/phpractice/index.php"><img src="main.png"></a>
+	</p>
+</div>
+
+</body>
+</html>

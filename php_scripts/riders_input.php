@@ -7,18 +7,23 @@
 <br>
 <form action="riders_submit.php" method="post">
 	rider's first name: <input name="rfname" type="text">
+	<br><br>
 	rider's last name: <input name="rlname" type="text">
+	<br><br>
 	customer's first name: <input name="cfname" type="text">
+	<br><br>
 	customer's last name: <input name="clname" type="text">
+	<br><br>
 	Release Form Link: <input name="relform" type="text">
+	<br><br>
 	<input type="submit">
 </form>
 
-<?php
-
-	
-
-?>
+<div>
+	<p>
+		<a href="http://localhost/phpractice/index.php"><img src="main.png"></a>
+	</p>
+</div>
 
 </body>
 </html>
