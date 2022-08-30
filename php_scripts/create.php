@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "whinny";
+$password = "Convolution*3425";
 $dbname = "wgra";
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -44,7 +44,7 @@ if ($results == 1){
 
 // HORSES TABLE
 echo "<br>";
-$query = "CREATE TABLE horses (id int, name varchar(255), owner varchar(255), pasture varchar(255), stall int, PRIMARY KEY (id))";
+$query = "CREATE TABLE horses (id int NOT NULL AUTO_INCREMENT, name varchar(255), ownerfname varchar(255), ownerlname varchar(255), pasture varchar(255), stall int, PRIMARY KEY (id))";
 $results = $conn->query($query);
 
 if ($results == 1){
@@ -53,7 +53,7 @@ if ($results == 1){
 
 // RIDERS TABLE
 echo "<br>";
-$query = "CREATE TABLE riders (id int, name varchar(255), customer varchar(255), release_form varchar(45), PRIMARY KEY (id))";
+$query = "CREATE TABLE riders (id int NOT NULL AUTO_INCREMENT, rfname varchar(255), rlname varchar(255), cfname varchar(255), clname varchar(255), relform varchar(255), PRIMARY KEY (id))";
 $results = $conn->query($query);
 
 if ($results == 1){
@@ -62,7 +62,7 @@ if ($results == 1){
 
 // PASTURES TABLE
 echo "<br>";	
-$query = "CREATE TABLE pastures (id int, name varchar(255), acres int, count int, conditions varchar(45), PRIMARY KEY (id))";
+$query = "CREATE TABLE pastures (id int NOT NULL AUTO_INCREMENT, name varchar(255), acres int, count int, conditions varchar(45), PRIMARY KEY (id))";
 $results = $conn->query($query);
 
 if ($results == 1){

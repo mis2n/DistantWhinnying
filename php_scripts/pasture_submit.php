@@ -8,15 +8,11 @@
 	$password = "Convolution*3425";
 	$dbname = "wgra";
 
-	$fn = $_POST["fname"];
-	$ln = $_POST["lname"];
-	$ph = $_POST["phone"];
-	$em = $_POST["email"];;
-	echo $fn . " " . $ln;
-	echo "<br>";
-	echo $ph;
-	echo "<br>";
-	echo $em;
+	$pn = $_POST["pname"];
+	$ac = $_POST["acres"];
+	$ct = $_POST["count"];
+	$co = $_POST["condit"];;
+	
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password);
@@ -27,7 +23,7 @@
 	echo "<br>";
 	echo "Server Connection Established";
 
-	$query = "INSERT INTO " . $dbname . ".customers (fname, lname, phone, email) VALUES ('" . $fn . "', '" . $ln . "', '" . $ph . "', '" . $em . "');";
+	$query = "INSERT INTO " . $dbname . ".pastures (name, acres, count, conditions) VALUES ('" . $pn . "', '" . $ac . "', '" . $ct . "', '" . $co . "');";
 	echo "<br>";
 	//echo $query;
 	$results = $conn->query($query);
@@ -36,7 +32,7 @@
 	echo "<br>";
 	echo "Connection Closed";
 
-	header("Location: http://localhost/phpractice/customer_input.php");
+	header("Location: http://localhost/phpractice/pasture_input.php");
 	exit();
 ?>
 </body>
