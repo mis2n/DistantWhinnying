@@ -3,37 +3,32 @@
 <body>
 
 <?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "Convolution*3425";
-	$dbname = "wgra";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+require_once('config.inc');
 
-	$rfn = $_POST["rfname"];
-	$rln = $_POST["rlname"];
-	$cfn = $_POST["cfname"];
-	$cln = $_POST["clname"];
-	$rf = $_POST["relform"];
+$rfn = $_GET["rfname"];
+$rln = $_GET["rlname"];
+$cfn = $_GET["cfname"];
+$cln = $_GET["clname"];
+$rf = $_GET["relform"];
 
-	// Create connection
-	$conn = new mysqli($servername, $username, $password);
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	}
-	echo "<br>";
-	echo "Server Connection Established";
-
-	$query = "INSERT INTO " . $dbname . ".riders (rfname, rlname, cfname, clname, relform) VALUES ('" . $rfn . "', '" . $rln . "', '" . $cfn . "', '" . $cln . "', '" . $rf . "');";
-	echo "<br>";
-	//echo $query;
-	$results = $conn->query($query);
-
-	$conn->close();
-	echo "<br>";
-	echo "Connection Closed";
-
-	header("Location: riders_input.php");
+$query = "INSERT INTO " . $dbname . ".riders (rfname, rlname, cfname, clname, relform) VALUES ('" . $rfn . "', '" . $rln . "', '" . $cfn . "', '" . $cln . "', '" . $rf . "');";
+echo "<br>";
+echo $query;
+try{
+	$results = $db->query($query);
+}
+catch(PDOException $e){
+	echo "INSERT failed: " . $e->getMessage();
 	exit();
+}
+echo "<br>";
+echo "Connection Closed";
+
+header("Location: riders_input.php");
+exit();
 ?>
 </body>
 </html>

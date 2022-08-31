@@ -5,7 +5,7 @@
 <br>
 <h1>Enter rider information, then click "Submit".</h1>
 <br>
-<form action="riders_submit.php" method="post">
+<form action="riders_submit.php" method="get">
 	rider's first name: <input name="rfname" type="text">
 	<br><br>
 	rider's last name: <input name="rlname" type="text">

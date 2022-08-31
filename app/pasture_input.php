@@ -5,7 +5,7 @@
 <br>
 <h1>Enter pasture information, then click "Submit".</h1>
 <br>
-<form action="pasture_submit.php" method="post">
+<form action="pasture_submit.php" method="get">
 	pasture name: <input name="pname" type="text">
 	<br><br>
 	acres: <input name="acres" type="int">

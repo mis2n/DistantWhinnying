@@ -5,7 +5,7 @@
 <br>
 <h1>Enter horse information, then click "Submit".</h1>
 <br>
-<form action="horse_submit.php" method="post">
+<form action="horse_submit.php" method="get">
 	horse name: <input name="hname" type="text">
 	<br><br>
 	owner's first name: <input name="ofname" type="text">

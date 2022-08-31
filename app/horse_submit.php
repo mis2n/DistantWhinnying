@@ -3,44 +3,39 @@
 <body>
 
 <?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "Convolution*3425";
-	$dbname = "wgra";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+require_once('config.inc');
 
-	$hn = $_POST["hname"];
-	$fn = $_POST["ofname"];
-	$ln = $_POST["olname"];
-	$ps = $_POST["pasture"];
-	$st = $_POST["stall"];;
-	echo $hn;
-	echo "<br>";
-	echo $fn . " " . $ln;
-	echo "<br>";
-	echo $pt;
-	echo "<br>";
-	echo $st;
+$hn = $_GET["hname"];
+$fn = $_GET["ofname"];
+$ln = $_GET["olname"];
+$ps = $_GET["pasture"];
+$st = $_GET["stall"];;
+echo $hn;
+echo "<br>";
+echo $fn . " " . $ln;
+echo "<br>";
+echo $ps;
+echo "<br>";
+echo $st;
 
-	// Create connection
-	$conn = new mysqli($servername, $username, $password);
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	}
-	echo "<br>";
-	echo "Server Connection Established";
-
-	$query = "INSERT INTO " . $dbname . ".horses (name, ownerfname, ownerlname, pasture, stall) VALUES ('" . $hn . "', '" . $fn . "', '" . $ln . "', '" . $ps . "', '" . $st . "');";
-	echo "<br>";
-	//echo $query;
-	$results = $conn->query($query);
-
-	$conn->close();
-	echo "<br>";
-	echo "Connection Closed";
-
-	header("Location: horse_input.php");
+$query = "INSERT INTO " . $dbname . ".horses (name, ownerfname, ownerlname, pasture, stall) VALUES ('" . $hn . "', '" . $fn . "', '" . $ln . "', '" . $ps . "', '" . $st . "');";
+echo "<br>";
+//echo $query;
+try{
+	$results = $db->query($query);
+}
+catch(PDOException $e){
+	echo "INSERT failed: " . $e->getMessage();
 	exit();
+}
+echo "<br>";
+echo "Connection Closed";
+
+header("Location: horse_input.php");
+exit();
 ?>
 </body>
 </html>
