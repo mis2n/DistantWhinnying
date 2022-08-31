@@ -1,62 +1,22 @@
-<!doctype html>
-<html lang=en>
-<head>
-	<meta charset=utf-8>
-</head>
+<html>
 <body>
-	<header></header>
-	<section>
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+<title>Farm Database Access Web Application</title>
 
-$db = new PDO('mysql:dbname=farm;host=localhost', 'admin', 'JmO2n6JENrsa');
+<div>
 
-$query = $db->query('SHOW TABLES');
-$tables = $query->fetchAll(PDO::FETCH_COLUMN);
-foreach($tables as $table){
-	echo "<h2>" . $table . "</h2>";
-	
-	$select = 'SELECT * FROM `' . $table . '`';
-	$rows = $db->query($select)->fetchALL(PDO::FETCH_ASSOC);
-	$cols = array_keys($rows[0]);	
-	
-	echo "<table border=1>";
+	<p>
+		<h1>WELCOME! Please choose an option . . .</h1>
+		<br>
+		<a href="customer_input.php"><img src="img/add_customer.png"></a>
+		<a href="riders_input.php"><img src="img/add_rider.png"></a>
+		<br>
+		<a href="horse_input.php"><img src="img/add_horse.png"></a>
+		<a href="pasture_input.php"><img src="img/add_pasture.png"></a>
+		<a href="create.php"><img src="img/create_db.png"></a>
+	</p>
 
-	echo "<tr>";
-	foreach($cols as $col)
-		echo "<th>" . $col . "</th>";
-	echo "</tr>";
+</div>
 
-	foreach($rows as $row){
-		echo "<tr>";
-		foreach($cols as $col)
-			echo "<td>" . $row[$col] . "</td>";
-		echo "</tr>";
-	}
-	echo "</table>";
 
-	$show = 'SHOW CREATE TABLE ' . $table;
-	$create = $db->query($show)->fetchAll(PDO::FETCH_ASSOC);
-	print_r($create[0]['Create Table']);
-	echo "<br>";
-	foreach($rows as $row){
-		$insert = 'INSERT INTO `' . $table . '` (';
-		foreach($cols as $col)
-			$insert = $insert . '`' . $col . '`, ';
-		$insert = $insert . ') VALUES (';
-		foreach($cols as $col)
-			$insert = $insert . '\'' . $row[$col] . '\', ';
-		$insert = $insert . ')';
-		print_r($insert);
-		echo "<br>";
-	}
-
-}
-?>
-	<br>
-	<a href="http://rhel2.jrf2m.com/add_customer.php?return=index.php">Add Customer</a>
-	</section>
 </body>
 </html>

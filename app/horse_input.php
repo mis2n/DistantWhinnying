@@ -21,7 +21,7 @@
 
 <div>
 	<p>
-		<a href="http://localhost/phpractice/index.php"><img src="main.png"></a>
+		<a href="index.php"><img src="img/main.png"></a>
 	</p>
 </div>
 

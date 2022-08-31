@@ -8,18 +8,11 @@
 	$password = "Convolution*3425";
 	$dbname = "wgra";
 
-	$hn = $_POST["hname"];
-	$fn = $_POST["ofname"];
-	$ln = $_POST["olname"];
-	$ps = $_POST["pasture"];
-	$st = $_POST["stall"];;
-	echo $hn;
-	echo "<br>";
-	echo $fn . " " . $ln;
-	echo "<br>";
-	echo $pt;
-	echo "<br>";
-	echo $st;
+	$pn = $_POST["pname"];
+	$ac = $_POST["acres"];
+	$ct = $_POST["count"];
+	$co = $_POST["condit"];;
+	
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password);
@@ -30,7 +23,7 @@
 	echo "<br>";
 	echo "Server Connection Established";
 
-	$query = "INSERT INTO " . $dbname . ".horses (name, ownerfname, ownerlname, pasture, stall) VALUES ('" . $hn . "', '" . $fn . "', '" . $ln . "', '" . $ps . "', '" . $st . "');";
+	$query = "INSERT INTO " . $dbname . ".pastures (name, acres, count, conditions) VALUES ('" . $pn . "', '" . $ac . "', '" . $ct . "', '" . $co . "');";
 	echo "<br>";
 	//echo $query;
 	$results = $conn->query($query);
@@ -39,7 +32,7 @@
 	echo "<br>";
 	echo "Connection Closed";
 
-	header("Location: http://localhost/phpractice/horse_input.php");
+	header("Location: pasture_input.php");
 	exit();
 ?>
 </body>

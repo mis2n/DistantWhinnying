@@ -8,15 +8,11 @@
 	$password = "Convolution*3425";
 	$dbname = "wgra";
 
-	$fn = $_POST["fname"];
-	$ln = $_POST["lname"];
-	$ph = $_POST["phone"];
-	$em = $_POST["email"];;
-	echo $fn . " " . $ln;
-	echo "<br>";
-	echo $ph;
-	echo "<br>";
-	echo $em;
+	$rfn = $_POST["rfname"];
+	$rln = $_POST["rlname"];
+	$cfn = $_POST["cfname"];
+	$cln = $_POST["clname"];
+	$rf = $_POST["relform"];
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password);
@@ -27,7 +23,7 @@
 	echo "<br>";
 	echo "Server Connection Established";
 
-	$query = "INSERT INTO " . $dbname . ".customers (fname, lname, phone, email) VALUES ('" . $fn . "', '" . $ln . "', '" . $ph . "', '" . $em . "');";
+	$query = "INSERT INTO " . $dbname . ".riders (rfname, rlname, cfname, clname, relform) VALUES ('" . $rfn . "', '" . $rln . "', '" . $cfn . "', '" . $cln . "', '" . $rf . "');";
 	echo "<br>";
 	//echo $query;
 	$results = $conn->query($query);
@@ -36,7 +32,7 @@
 	echo "<br>";
 	echo "Connection Closed";
 
-	header("Location: http://localhost/phpractice/customer_input.php");
+	header("Location: riders_input.php");
 	exit();
 ?>
 </body>
