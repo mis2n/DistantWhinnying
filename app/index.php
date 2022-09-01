@@ -13,6 +13,10 @@
 		<a href="horse_input.php"><img src="img/add_horse.png"></a>
 		<a href="pasture_input.php"><img src="img/add_pasture.png"></a>
 		<a href="create.php"><img src="img/create_db.png"></a>
+		<br>
+		<a href="show_tables.php">Show Tables</a>
+		<br>
+		<a href="destroy.php">Destroy Database</a>
 	</p>
 
 </div>
