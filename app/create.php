@@ -10,19 +10,6 @@ error_reporting(E_ALL);
 
 require_once('config.inc');
 
-//CREATE  NEW SCHEMA (database)
-echo "<br>";
-$query = 'CREATE SCHEMA ' . $dbname;
-try{
-	$results = $db->query($query);
-}
-catch(PDOException $e){
-	echo "Database Creation failed: " . $e->getMessage();
-}
-echo "Database created";
-
-
-
 //CREATE TABLES
 echo "<br>";
 
