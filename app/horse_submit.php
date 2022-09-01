@@ -8,22 +8,20 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require_once('config.inc');
 
-$hn = $_GET["hname"];
-$fn = $_GET["ofname"];
-$ln = $_GET["olname"];
-$ps = $_GET["pasture"];
-$st = $_GET["stall"];;
-echo $hn;
+$name = $_GET["name"];
+$ownerid = $_GET["ownerid"];
+$pastureid = $_GET["pastureid"];
+$stall = $_GET["stall"];;
+echo $name;
 echo "<br>";
-echo $fn . " " . $ln;
+echo $ownerid;
 echo "<br>";
-echo $ps;
+echo $pastureid;
 echo "<br>";
-echo $st;
+echo $stall;
 
-$query = "INSERT INTO " . $dbname . ".horses (name, ownerfname, ownerlname, pasture, stall) VALUES ('" . $hn . "', '" . $fn . "', '" . $ln . "', '" . $ps . "', '" . $st . "');";
+$query = "INSERT INTO " . $dbname . ".horses (name, ownerid, pastureid, stall) VALUES ('" . $name . "', '" . $ownerid . "', '" . $pastureid . "', '" . $stall . "');";
 echo "<br>";
-//echo $query;
 try{
 	$results = $db->query($query);
 }
