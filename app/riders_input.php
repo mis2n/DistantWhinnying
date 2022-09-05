@@ -1,7 +1,7 @@
 <html>
 <head><title>Rider Data Entry</title></head>
 
-<body>
+<body style="background-color:#FEF5AC;">
 <br>
 <h1>Enter rider information, then click "Submit".</h1>
 <br>
@@ -10,9 +10,7 @@
 	<br><br>
 	rider's last name: <input name="rlname" type="text">
 	<br><br>
-	customer's first name: <input name="cfname" type="text">
-	<br><br>
-	customer's last name: <input name="clname" type="text">
+	customer's ID #: <input name="custid" type="int">
 	<br><br>
 	Release Form Link: <input name="relform" type="text">
 	<br><br>
@@ -21,7 +19,7 @@
 
 <div>
 	<p>
-		<a href="index.php"><img src="img/main.png"></a>
+		<button type="button" onclick="location.href='index.php'">Main Menu</button>
 	</p>
 </div>
 

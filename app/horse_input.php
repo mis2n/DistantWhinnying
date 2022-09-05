@@ -6,9 +6,9 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require_once('config.inc');
 ?>
-<body>
+<body style="background-color:#FEF5AC;">
 <br>
-<h1>Enter horse information, then click "Submit".</h1>
+<h1>Enter new horse information</h1>
 <br>
 <form action="horse_submit.php" method="get">
 	horse name: <input name="name" type="text">
@@ -47,9 +47,11 @@ foreach($rows as $row){
 	<input type="submit">
 </form>
 
+<br><br>
+
 <div>
 	<p>
-		<a href="index.php"><img src="img/main.png"></a>
+		<button type="button" onclick="location.href='index.php'">Main Menu</button>
 	</p>
 </div>
 

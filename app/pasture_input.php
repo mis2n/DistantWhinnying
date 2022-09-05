@@ -1,9 +1,9 @@
 <html>
 <head><title>Pasture Data Entry</title></head>
 
-<body>
+<body style="background-color:#FEF5AC;">
 <br>
-<h1>Enter pasture information, then click "Submit".</h1>
+<h1>Enter new pasture information</h1>
 <br>
 <form action="pasture_submit.php" method="get">
 	pasture name: <input name="pname" type="text">
@@ -17,9 +17,11 @@
 	<input type="submit">
 </form>
 
+<br><br>
+
 <div>
 	<p>
-		<a href="index.php"><img src="img/main.png"></a>
+		<button type="button" onclick="location.href='index.php'">Main Menu</button>
 	</p>
 </div>
 

@@ -1,9 +1,9 @@
 <html>
 <head><title>Customer Data Entry</title></head>
 
-<body>
+<body style="background-color:#FEF5AC;">
 <br>
-<h1>Enter customer information, then click "Submit".</h1>
+<h1>Enter new customer information</h1>
 <br>
 <form action="customer_submit.php" method="get">
 	first name: <input name="fname" type="text">
@@ -21,7 +21,7 @@
 
 <div>
 	<p>
-		<a href="index.php"><img src="img/main.png"></a>
+		<button type="button" onclick="location.href='index.php'">Main Menu</button>
 	</p>
 </div>
 

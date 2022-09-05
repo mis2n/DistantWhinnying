@@ -6,15 +6,15 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 require_once('config.inc');
 
 $rfn = $_GET["rfname"];
 $rln = $_GET["rlname"];
-$cfn = $_GET["cfname"];
-$cln = $_GET["clname"];
+$cid = $_GET["custid"];
 $rf = $_GET["relform"];
 
-$query = "INSERT INTO " . $dbname . ".riders (rfname, rlname, cfname, clname, relform) VALUES ('" . $rfn . "', '" . $rln . "', '" . $cfn . "', '" . $cln . "', '" . $rf . "');";
+$query = "INSERT INTO " . $dbname . ".riders (rfname, rlname, customerid, relform) VALUES ('" . $rfn . "', '" . $rln . "', '" . $cid . "', '" . $rf . "');";
 echo "<br>";
 echo $query;
 try{
