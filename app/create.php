@@ -1,5 +1,5 @@
 <html>
-<body>
+<body style="background-color:red;">
 
 <title>Creating WGRA Database Schema</title>
 
@@ -45,7 +45,9 @@ catch(PDOException $e){
 
 <div>
 	<p>
-		<a href="index.php"><img src="img/main.png"></a>
+		<h1>Database Created</h1>
+		<br><br>
+		<button type="button" onclick="location.href='index.php'">Main Menu</button>
 	</p>
 </div>
 

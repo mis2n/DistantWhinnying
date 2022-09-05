@@ -3,9 +3,10 @@
 <head>
 	<meta charset=utf-8>
 </head>
-<body>
+<body style="background-color:#FEF5AC;">
 	<header></header>
 	<section>
+<h1>Database Tables</h1>
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -42,7 +43,7 @@ foreach($tables as $table){
 
 	$show = 'SHOW CREATE TABLE ' . $table;
 	$create = $db->query($show)->fetchAll(PDO::FETCH_ASSOC);
-	print_r($create[0]['Create Table']);
+	//print_r($create[0]['Create Table']);//*********************************
 	echo "<br>";
 	foreach($rows as $row){
 		$insert = 'INSERT INTO `' . $table . '` (';
@@ -52,7 +53,7 @@ foreach($tables as $table){
 		foreach($cols as $col)
 			$insert = $insert . '\'' . $row[$col] . '\', ';
 		$insert = $insert . ')';
-		print_r($insert);
+		//print_r($insert);//*********************************************
 		echo "<br>";
 	}
 
@@ -60,6 +61,12 @@ foreach($tables as $table){
 ?>
 	<br>
 	</section>
-	<a href="index.php">Go Home</a>
+
+<div>
+	<p>
+		<button type="button" onclick="location.href='index.php'">Main Menu</button>
+	</p>
+</div>
+
 </body>
 </html>
