@@ -11,8 +11,8 @@ require_once('config.inc');
 
 $rfn = $_GET["rfname"];
 $rln = $_GET["rlname"];
-$cid = $_GET["custid"];
 $rf = $_GET["relform"];
+$cid = $_GET["ownerid"];
 
 $query = "INSERT INTO " . $dbname . ".riders (rfname, rlname, customerid, relform) VALUES ('" . $rfn . "', '" . $rln . "', '" . $cid . "', '" . $rf . "');";
 echo "<br>";
