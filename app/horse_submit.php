@@ -8,7 +8,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require_once('config.inc');
 
-$name = $_GET["name"];
+$name = $_GET["hname"];
 $ownerid = $_GET["ownerid"];
 $pastureid = $_GET["pastureid"];
 $stall = $_GET["stall"];;

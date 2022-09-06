@@ -24,7 +24,6 @@ require_once('config.inc');
 	<select id="customerid" name="ownerid">
 
 <?php
-
 $select = 'SELECT id, fname, lname FROM customers';
 $rows = $db->query($select)->fetchALL(PDO::FETCH_ASSOC);
 print_r($rows);
