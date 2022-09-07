@@ -53,4 +53,4 @@ foreach($rows as $row){
 </form>
 
 <br><br>
-<div><p><button type="button" onclick="location.href='http://localhost/index.php'">Main Menu</button><p></div>
+<div><p><button type="button" onclick="location.href='index.php'">Main Menu</button><p></div>
