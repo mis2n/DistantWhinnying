@@ -37,12 +37,12 @@
 		<br>
 		<h2>Remove Data</h2>
 		<br>
-		<button type="button" onclick="location.href='customer_remove.php'">Remove Customer</button>
-		<button type="button" onclick="location.href='horse_remove.php'">Remove Horse</button>
+		<button type="button" onclick="location.href='cust_del_choose.php'">Remove Customer</button>
+		<button type="button" onclick="location.href='horse_del_choose.php'">Remove Horse</button>
 		<br>
 		<br>
-		<button type="button" onclick="location.href='riders_remove.php'">Remove Rider</button>
-		<button type="button" onclick="location.href='pasture_remove.php'">Remove Pasture</button>
+		<button type="button" onclick="location.href='rider_del_choose.php'">Remove Rider</button>
+		<button type="button" onclick="location.href='pasture_del_choose.php'">Remove Pasture</button>
 		<br>
 		<br>
 	</p>
