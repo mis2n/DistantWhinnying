@@ -56,7 +56,7 @@
 		<h2>Update Data</h2>
 		<br>
 		<button type="button" onclick="location.href='customer_mod_entry.php'">Update Customer</button>
-		<button type="button" onclick="location.href='horse_mod.php'">Update Horse</button>
+		<button type="button" onclick="location.href='horse_mod_entry.php'">Update Horse</button>
 		<br>
 		<br>
 		<button type="button" onclick="location.href='rider_mod_entry.php'">Update Rider</button>
