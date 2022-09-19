@@ -4,27 +4,33 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require_once('config.inc');
+global $db;
+
+try{
+    //$select = 'SELECT name, ownerid, stall FROM horses';
+    $select = 'SELECT name, ownerid, stall, customers.id, fname, lname FROM customers, horses WHERE ownerid=customers.id';
+
+    $rows = $db->query($select)->fetchALL(PDO::FETCH_ASSOC);
+}
+catch(PDOException $e){
+    echo "SELECT ERROR";
+    print_r($e);
+    echo $select;
+}
 
 function stall($id) {
-	global $db;
-	
-	try{
-		echo "<table width=\"100%\" height=\"100%\" style=\"background-color: white;\"><tr><td>";
-		$select = 'SELECT name, ownerid, stall FROM horses';
-		$rows = $db->query($select)->fetchALL(PDO::FETCH_ASSOC);
-		foreach($rows as $row){
-			if($row["stall"] == $id){
-				echo "<p>Name: " . $row["name"] . "</p>";
-				echo "<p>Ownerid: " . $row["ownerid"] . "</p>";
-			}	
-		}
-		echo "</td></tr></table>";
-	}
-	catch(PDOException $e){
-
-		echo "EMPTY";
-	}
+	global $rows;
+    echo "<table width=\"100%\" height=\"100%\" style=\"background-color: white;\"><tr><td>";
+    foreach($rows as $row){
+        if($row["stall"] == $id){
+            echo "<p>Name: " . $row["name"] . "</p>";
+            //echo "<p>Ownerid: " . $row["ownerid"] . "</p>";
+            echo "<p>Owner: " . $row["fname"] . " " . $row["lname"] . "</p>";
+        }
+    }
+    echo "</td></tr></table>";
 }
+
 ?>
 !doctype html>
 <html lang=en>
