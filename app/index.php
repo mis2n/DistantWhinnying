@@ -71,11 +71,14 @@
 
 	<p>
 		<br>
-		<h2>CREATE DATABASE</h2>
+		<h2>DATABASE OPERATIONS</h2>
 		<br>
 		<button type="button" onclick="location.href='create.php'">Create Database</button>
 		<button type="button" onclick="location.href='destroy.php'">Destroy Database</button>
+		<br>
+		<br>
 		<button type="button" onclick="location.href='show_tables.php'">Show Tables</button>
+		<button type="button" onclick="location.href='show_barn.php'">Show Barn</button>
 		<br>
 		<br>
 	</p>
