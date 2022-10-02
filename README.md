@@ -14,10 +14,16 @@ options for initializing the Docker container:<br>
 	<li>For Mac ??????</li>
 </ol>
 <br>
-Once the environment is initialized you will see a newly generated root password in the terminal. Copy the password
+Once the environment is initialized you will see a newly generated root password in the terminal as shown below. Copy the password
 and add it to the second line of the file "config.inc.example". Then change this file name to "config.inc". This completes
 the configuration of the database.
+
 <br>
+<br>
+<img src="passgen.png" alt="passgen">
+<br>
+<br>
+
 You may now access the database landing page in your machine's browser by navigating to "localhost:80". The database will be 
 empty with no data or tables. Clicking on the "Create Database" button will create all required tables and data entry can begin.
 <br>
