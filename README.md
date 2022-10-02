@@ -14,6 +14,25 @@ options for initializing the Docker container:<br>
 	<li>For Mac ??????</li>
 </ol>
 <br>
+Once the environment is initialized you will see a newly generated root password in the terminal. Copy the password
+and add it to the second line of the file "config.inc.example". Then change this file name to "config.inc". This completes
+the configuration of the database.
+<br>
+You may now access the database landing page in your machine's browser by navigating to "localhost:80". The database will be 
+empty with no data or tables. Clicking on the "Create Database" button will create all required tables and data entry can begin.
+<br>
+It is important to note the heirarchy of data entries. New entries can only be added for a table if relations exist in tables with 
+a lower heirarchy value.
+<br>
+<ol>
+	<li>Pastures & Customers</li>
+	<li>Horses & Riders</li>
+</ol>
+<br>
+For example: A customer horse record can not exist if the associated customer record does not exist. Also, A horse record 
+can not exist if a pasture record does not exist. The reverse is true for deletions: A customer can not be deleted if an associated 
+horse or rider record exists. Additionally, the database can not be destroyed (via the "Destroy Database" button) if records exist
+in the database. 
 	
 
 </p>
