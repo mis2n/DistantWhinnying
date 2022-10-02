@@ -24,6 +24,7 @@ empty with no data or tables. Clicking on the "Create Database" button will crea
 It is important to note the heirarchy of data entries. New entries can only be added for a table if relations exist in tables with 
 a lower heirarchy value.
 <br>
+<br>
 <ol>
 	<li>Pastures & Customers</li>
 	<li>Horses & Riders</li>
