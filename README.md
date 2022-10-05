@@ -24,6 +24,7 @@ It is important to note the heirarchy of data entries. New entries can only be a
 a lower heirarchy value.
 <br>
 <br>
+<h2>Data Heirarchy</h2>
 <ol>
 	<li>Pastures & Customers</li>
 	<li>Horses & Riders</li>
