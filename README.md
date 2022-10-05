@@ -6,7 +6,7 @@
 <p>
 Utilization of this database system requires the installation of Docker on your machine. For information regarding the installation and 
 utilization of Docker, please visit <a href="https://www.docker.com/">https://www.docker.com/</a>. Once Docker is installed, you can initialize the docker environment using the command found in run.sh, changing the two directory paths to the location of this repository on your machine. You can then run the command in your terminal (for Linux and Mac) or in Powershell (for Windows).
-<br>
+<br><br>
 Once the environment is initialized you will see a newly generated root password in terminal or Powershell as shown below. Copy the password
 and add it to the second line of the file "config.inc.example". Then change this file name to "config.inc". This completes
 the configuration of the database.
