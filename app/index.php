@@ -6,9 +6,7 @@
 
 	<p>
 		<h1>!!! WELCOME !!!</h1>
-		<br>
-		<h1>Horse Farm Data Entry</h1>
-		<br>
+		<h1>Horse Farm Database</h1>
 	</p>
 
 </div>
@@ -16,9 +14,7 @@
 <div style="text-align: center; background-color:#97D2EC;">
 
 	<p>
-		<br>
 		<h2>Add Data</h2>
-		<br>
 		<button type="button" onclick="location.href='customer_input.php'">Add Customer</button>
 		<button type="button" onclick="location.href='horse_input.php'">Add Horse</button>
 		<br>
@@ -34,9 +30,7 @@
 <div style="text-align: center; background-color:#FEF5AC;">
 
 	<p>
-		<br>
 		<h2>Remove Data</h2>
-		<br>
 		<button type="button" onclick="location.href='cust_del_choose.php'">Remove Customer</button>
 		<button type="button" onclick="location.href='horse_del_choose.php'">Remove Horse</button>
 		<br>
@@ -52,9 +46,7 @@
 <div style="text-align: center; background-color:#97D2EC;">
 
 	<p>
-		<br>
 		<h2>Update Data</h2>
-		<br>
 		<button type="button" onclick="location.href='customer_mod_entry.php'">Update Customer</button>
 		<button type="button" onclick="location.href='horse_mod_entry.php'">Update Horse</button>
 		<br>
@@ -70,9 +62,7 @@
 <div style="text-align: center; background-color:red;">
 
 	<p>
-		<br>
 		<h2>DATABASE OPERATIONS</h2>
-		<br>
 		<button type="button" onclick="location.href='create.php'">Create Database</button>
 		<button type="button" onclick="location.href='destroy.php'">Destroy Database</button>
 		<br>
