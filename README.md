@@ -32,8 +32,8 @@ a lower heirarchy value.
 <br>
 For example: A horse record can not exist if the associated customer record does not exist. Also, A horse record 
 can not exist if a pasture record does not exist. The reverse is true for deletions: A customer can not be deleted if an associated 
-horse or rider record exists. Additionally, the database can not be destroyed (via the "Destroy Database" button) if any records exist
-in the database.
+horse or rider record exists. Additionally, the database can be destroyed (via the "Destroy Database" button) even if records exist
+in the database. This function was added primarily for development, and should probably not be included for end users.
 	
 
 </p>
